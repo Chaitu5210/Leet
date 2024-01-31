@@ -12,17 +12,13 @@ class Solution:
         length=0
         while second<len(s):
             if s[second] in lst:
-                print(lst)
-                print("came in")
                 length=max(len(lst),length)
-                print(length)
                 index=lst.index(s[second])
                 lst=lst[index+1::]
                 lst.append(s[second])
                 second=second+1
                 first=first+1
             else:
-                print(s[second])
                 lst.append(s[second])
                 second=second+1
                 length=max(len(lst),length)
