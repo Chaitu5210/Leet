@@ -12,8 +12,5 @@ class Solution:
                 return i
         if nums[0]>nums[1]:
             return 0
-        print("Came out")
-        print(nums[len(nums)-1])
         if nums[len(nums)-1]>nums[len(nums)-2]:
-            print(" comming hereeeeeeeeeeeeeeeeeee")
             return len(nums)-1
