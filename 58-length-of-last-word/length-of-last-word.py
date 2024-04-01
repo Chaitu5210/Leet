@@ -11,7 +11,6 @@ class Solution:
                 temp=temp+1
                 string_length=string_length-1
             else:
-                print(temp)
                 return temp
         return temp
         
