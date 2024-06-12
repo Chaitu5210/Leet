@@ -12,7 +12,7 @@ class Solution:
             window[a]=1+window.get(a,0)
             if a in seent and window[a]==seent[a]:
                 first=first+1
-            while first>=second:
+            while first==second:
                 if right-left+1 < reslen:
                     res=[left,right]
                     reslen=right-left+1
