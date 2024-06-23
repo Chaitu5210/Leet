@@ -1,21 +1,21 @@
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         temp=[]
-        finallist=[]
-        
+        result=[]
         def dfs(temp):
-            if sum(temp)==target:
-                temp.sort()
-                copylist=temp.copy()
-                if copylist not in finallist:
-                    finallist.append(copylist)
-                temp=0
-                return
             if sum(temp)>target:
                 return False
-            for num in candidates:
-                temp.append(num)
+            if sum(temp)==target:
+                temp.sort()
+                if temp not in result:
+                    copying=temp.copy()
+                    result.append(copying)
+                    print(result)
+            for i in candidates:
+                temp.append(i)
                 dfs(temp)
-                temp.remove(num)
+                temp.remove(i)
         dfs(temp)
-        return finallist if len(finallist)!=0 else []   
+        return result
+            
+        
