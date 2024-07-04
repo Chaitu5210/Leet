@@ -9,14 +9,10 @@ class Solution:
         temp=result
         sum=0
         while head:
-            if head.val==0:
-                if sum!=0:
-                    print("came inside with ",sum)
-                    temp.next=ListNode(sum)
-                    temp=temp.next
-                    sum=0
-                else:
-                    pass
+            if head.val==0 and sum!=0:
+                temp.next=ListNode(sum)
+                temp=temp.next
+                sum=0
             else:
                 sum=sum+head.val
             head=head.next
