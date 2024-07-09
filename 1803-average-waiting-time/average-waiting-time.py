@@ -10,6 +10,4 @@ class Solution:
             waiting.append(totaltime-arrival)
         result = sum(waiting) / len(waiting)
         result = round(result, 5)
-        print(result)
-
         return result
