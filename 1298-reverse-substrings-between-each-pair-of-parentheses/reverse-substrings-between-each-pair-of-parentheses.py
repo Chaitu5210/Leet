@@ -14,7 +14,6 @@ class Solution:
                 stackoutput=stackoutput[::-1]
                 while(stackoutput):
                     mainvariable.append(stackoutput.pop())
-                print("finally ",mainvariable)
             else:
                 stackholder.append(mainstring[i])
         return "".join(mainvariable) if len(mainvariable)>0 else s
