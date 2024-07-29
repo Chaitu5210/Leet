@@ -12,7 +12,6 @@ class Solution:
             for i in range(len(rightlist)):
                 if element < rightlist[i]:
                     rightcounter=rightcounter+1
-            print(leftcounter,rightcounter,element)
             return leftcounter*rightcounter
 
         for i in range(len(rating)):
