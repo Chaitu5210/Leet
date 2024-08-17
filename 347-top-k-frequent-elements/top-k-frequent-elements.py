@@ -1,14 +1,11 @@
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         Dict={}
-        for i in nums:
-            Dict[i]=1+Dict.get(i,0)
-        seen=sorted(Dict,key=lambda x:-Dict[x])
-        i=0
-        list1=[]
-        while k!=0:
-            list1.append(seen[i])
-            i=i+1
-            k=k-1
-        return list1
-        
+        result=[]
+        for i in range(len(nums)):
+            Dict[nums[i]]=1+Dict.get(nums[i],0)
+        FinalList=dict(sorted(Dict.items(), key=lambda item:item[1],reverse=True ))
+        resultlist=list(FinalList.keys())
+        for i in range(k):
+            result.append(resultlist[i])
+        return result
