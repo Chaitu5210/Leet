@@ -6,3 +6,6 @@ class Solution:
                 return True
             seen.add(nums[i])
         return False
+
+# space complexity is O(n)
+# time complexity is O(n)
