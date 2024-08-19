@@ -6,9 +6,7 @@ class Solution:
         for i in range(len(nums)):
             leftside.append(temp)
             temp=temp*nums[i]
-        print(leftside)
         temp=1
-        print("finally ",temp)
         i=len(nums)-1
         while i>=0:
             rightside.append(temp)
@@ -16,12 +14,12 @@ class Solution:
             i=i-1
         rightside.reverse()
         result=[1]*len(nums)
-        print("leftside ",leftside)
-        print("rightside ",rightside)
         for i in range(len(nums)):
             result[i]=leftside[i]*rightside[i]
-        print(result)
         return result
+
+# Time Complexity - O(n)
+# Space Complexity - O(n)
 
             
 
