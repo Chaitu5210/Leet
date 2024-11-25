@@ -6,5 +6,7 @@ class Solution:
         t_list.sort()
         return True if s_list == t_list else False
 
+# Time Complexity - O( n logh n )
+# Space Complexity - O( n + m )
         
         
