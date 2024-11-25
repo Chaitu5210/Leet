@@ -1,10 +1,10 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        temps=list(s)
-        tempt=list(t)
-        temps=sorted(s)
-        tempt=sorted(t)
-        if temps==tempt:
-            return True
-        return False
+        s_list = list(s)
+        t_list = list(t)
+        s_list.sort()
+        t_list.sort()
+        return True if s_list == t_list else False
+
+        
         
