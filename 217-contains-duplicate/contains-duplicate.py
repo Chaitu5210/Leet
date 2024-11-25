@@ -1,4 +1,7 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         nums_set = set(nums)
-        return True if len(nums_set)!=len(nums) else False      
+        return True if len(nums_set)!=len(nums) else False
+
+# Space Complexity - O(n)
+# Time Complexity - O(n)
