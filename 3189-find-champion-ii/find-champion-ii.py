@@ -14,13 +14,6 @@ class Solution:
         if len(edges_set) != n:
             return -1
 
-
-
-
-
-
-
-
         Dominating_end = []
         Loosing_end = []
 
@@ -32,7 +25,7 @@ class Solution:
                     Dominating_end.append(edge[0])
                 Loosing_end.append(edge[1])
             
-        Dominating_end,Loosing_end = list(set(Dominating_end) - set(Loosing_end)), list(set(Loosing_end) - set(Dominating_end))
+        Dominating_end= list(set(Dominating_end) - set(Loosing_end))
 
         return Dominating_end[0] if len(Dominating_end)==1 else -1
 
