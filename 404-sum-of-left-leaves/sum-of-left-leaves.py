@@ -14,11 +14,9 @@ class Solution:
             if not root:
                 return sum
 
-            print(root.val, sum)
 
             if not root.left and not root.right and left:
                 sum = sum + root.val
-                print(f' Root Value is {root.val} and Sum is {sum}')
                 return sum
 
             sum = dfs(root.left, sum, left= True)
