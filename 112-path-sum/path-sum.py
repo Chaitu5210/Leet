@@ -17,8 +17,11 @@ class Solution:
             if not root.left and not root.right:
                 if sum + root.val == targetSum:
                     return True
+
+            if dfs(root.left, sum + root.val) or dfs(root.right, sum + root.val):
+                return True
             
-            return dfs(root.left, sum + root.val) or dfs(root.right, sum + root.val)
+            return False
 
         final_result = dfs(root, sum)
 
