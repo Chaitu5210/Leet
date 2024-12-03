@@ -13,17 +13,12 @@ class Solution:
 
             if not root:
                 return False
-
-            print(f'for current root {root.val} and sum {sum}')
             
             if not root.left and not root.right:
                 if sum + root.val == targetSum:
                     return True
-
-            if dfs(root.left, sum + root.val) or dfs(root.right, sum + root.val):
-                return True
             
-            return False
+            return dfs(root.left, sum + root.val) or dfs(root.right, sum + root.val)
 
         final_result = dfs(root, sum)
 
