@@ -7,15 +7,9 @@ class Solution:
             if len(word) < len(target):
                 return False
             temp = True
-            print(target,word)
             for i in range(len(target)):
-                print(i)
-                if target[i] == word[i]:
-                    pass
-                else:
-                    print("I am here")
+                if target[i] != word[i]:
                     return False
-            print(f'i am returning true')
             return True
 
 
